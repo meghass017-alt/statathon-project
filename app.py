@@ -16,7 +16,7 @@ if st.button("Run Query"):
         try:
             # Step 3: Call Backend API
             response = requests.post(
-                "http://localhost:8000/query",
+                "https://statathon-project-backend.onrender.com",
                 json={"question": question},
                 timeout=5
             )
@@ -58,3 +58,4 @@ if st.button("Run Query"):
             st.error(f"Connection Error: {str(e)}")
         except Exception as e:
             st.error(f"Processing Error: {str(e)}")
+
